@@ -16,7 +16,6 @@ import de.ksquared.system.mouse.GlobalMouseListener;
 import de.ksquared.system.mouse.MouseAdapter;
 import de.ksquared.system.mouse.MouseEvent;
 
-
 public class BreakoutBot {
 
 	public static void main(String[] args) throws Exception {
@@ -92,14 +91,18 @@ public class BreakoutBot {
 		
 		
 		Random ran = new Random();
+		BufferedImage screen;
+		
 		while(true){
-			BufferedImage screen = r.createScreenCapture(new Rectangle(0,0,(int)width,(int)height));
+			screen = r.createScreenCapture(new Rectangle(0,0,(int)width,(int)height));
+			loop:
 			for(int x = coords.get(0)[0]; x < coords.get(1)[0]; x++){
 				for(int y = coords.get(0)[1]; y < coords.get(1)[1]; y++){
 					Color curr = getColor(screen.getRGB(x,y));
 					if(curr.equals(ballColor)){
 						r.mouseMove(x + ran.nextInt(rand) - ran.nextInt(rand), y + ran.nextInt(rand) - ran.nextInt(rand));
 						System.out.println("Match at " + x + "," + y);
+						break loop;
 					}
 				}
 			}
