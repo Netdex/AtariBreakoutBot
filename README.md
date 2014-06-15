@@ -9,4 +9,4 @@ After configuration, use the mouse to set the top left and the bottom right corn
 The bot will then continue to execute until the 0 key is pressed, where it will then terminate.
 
 <h6>Libraries</h6>
-Uses libraries for getting native Windows mouse and keyboard input from <a href src=http://kra.lc/blog/2011/07/java-global-system-hook/></a>
+Uses libraries for getting native Windows mouse and keyboard input from <a href src=http://kra.lc/blog/2011/07/java-global-system-hook/>http://kra.lc/blog/2011/07/java-global-system-hook/</a>
